@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES Company - E-commerce Numérique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ES Company</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Menu <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#about">À propos</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="account/account.html">Mon Compte</a></li>
+                            <li><a href="#" id="settings-link">Paramètres</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#products">Produits</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="notification-toggle" class="notification-toggle">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">0</span>
+                </button>
+                <button id="cart-toggle" class="cart-toggle">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="ht">CREOLE</option>
+                    </select>
+                </div>
+                <a href="account/account.html" class="account-btn">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Notification Panel -->
+    <div id="notification-panel" class="notification-panel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button id="close-notifications" class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notification-content">
+            <p>Aucune notification pour le moment.</p>
+        </div>
+    </div>
+
+    <!-- Shopping Cart -->
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-header">
+            <h3>Votre Panier</h3>
+            <button id="close-cart" class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <p>Votre panier est vide.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <p>Total: <span>0.00 €</span></p>
+            </div>
+            <button class="checkout-btn" disabled>Passer à la caisse</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Bienvenue chez ES Company</h2>
+                <p>Découvrez nos produits numériques de qualité</p>
+                <a href="#products" class="btn">Voir les produits</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Nos Produits</h2>
+            <div class="products-grid" id="products-grid">
+                <!-- Les produits seront chargés dynamiquement -->
+                <p class="no-products">Aucun produit disponible pour le moment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À propos de nous</h2>
+            <p>ES Company est une entreprise spécialisée dans la vente de produits numériques de qualité. Notre mission est de fournir à nos clients des solutions innovantes et performantes.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ES Company</h3>
+                    <p>Votre partenaire pour des produits numériques de qualité.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-phone"></i> +1 778 764 0542</p>
+                    <p><i class="fas fa-envelope"></i> truemanno509@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="legal/terms.html">Termes & Conditions</a></li>
+                        <li><a href="legal/privacy.html">Politique de confidentialité</a></li>
+                        <li><a href="legal/refund.html">Politique de remboursement</a></li>
+                        <li><a href="legal/delivery.html">Politique de livraison</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ES Company. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Paramètres</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <h4>Notifications</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="push-notifications">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Notifications push</span>
+                </div>
+                <div class="setting-group">
+                    <h4>Langue</h4>
+                    <select id="settings-language">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="ht">Kreyòl</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <h4>Thème</h4>
+                    <select id="settings-theme">
+                        <option value="auto">Automatique</option>
+                        <option value="light">Clair</option>
+                        <option value="dark">Sombre</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
