@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - ES Company</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>ES Company Admin</h2>
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="#dashboard" class="active"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                    <li><a href="#products"><i class="fas fa-box"></i> Produits</a></li>
+                    <li><a href="#orders"><i class="fas fa-shopping-cart"></i> Commandes</a></li>
+                    <li><a href="#customers"><i class="fas fa-users"></i> Clients</a></li>
+                    <li><a href="#messages"><i class="fas fa-envelope"></i> Messages</a></li>
+                    <li><a href="#settings"><i class="fas fa-cog"></i> Paramètres</a></li>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Retour au site</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="admin-main">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <button id="sidebar-toggle" class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Tableau de bord</h1>
+                </div>
+                <div class="admin-header-right">
+                    <button id="backup-btn" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Sauvegarder
+                    </button>
+                    <button id="logout-btn" class="btn btn-primary">
+                        <i class="fas fa-sign-out-alt"></i> Déconnexion
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard -->
+            <section id="dashboard" class="admin-section active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="products-count">0</h3>
+                            <p>Produits</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="orders-count">0</h3>
+                            <p>Commandes</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="customers-count">0</h3>
+                            <p>Clients</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="messages-count">0</h3>
+                            <p>Messages</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Activité récente</h2>
+                    <div class="activity-list">
+                        <p>Aucune activité récente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Management -->
+            <section id="products" class="admin-section">
+                <div class="section-header">
+                    <h2>Gestion des produits</h2>
+                    <button id="add-product-btn" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Ajouter un produit
+                    </button>
+                </div>
+
+                <div class="products-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Prix</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-table-body">
+                            <!-- Les produits seront chargés ici -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Orders Management -->
+            <section id="orders" class="admin-section">
+                <div class="section-header">
+                    <h2>Gestion des commandes</h2>
+                </div>
+                <div class="orders-list">
+                    <p>Aucune commande pour le moment.</p>
+                </div>
+            </section>
+
+            <!-- Customers Management -->
+            <section id="customers" class="admin-section">
+                <div class="section-header">
+                    <h2>Gestion des clients</h2>
+                </div>
+                <div class="customers-list">
+                    <p>Aucun client enregistré pour le moment.</p>
+                </div>
+            </section>
+
+            <!-- Messages Management -->
+            <section id="messages" class="admin-section">
+                <div class="section-header">
+                    <h2>Messages des clients</h2>
+                </div>
+                <div class="messages-list">
+                    <p>Aucun message pour le moment.</p>
+                </div>
+            </section>
+
+            <!-- Settings -->
+            <section id="settings" class="admin-section">
+                <div class="section-header">
+                    <h2>Paramètres du site</h2>
+                </div>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="site-name">Nom du site</label>
+                        <input type="text" id="site-name" value="ES Company">
+                    </div>
+                    <div class="form-group">
+                        <label for="site-email">Email de contact</label>
+                        <input type="email" id="site-email" value="truemanno509@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="site-phone">Téléphone</label>
+                        <input type="text" id="site-phone" value="+1 778 764 0542">
+                    </div>
+                    <div class="form-group">
+                        <label for="backup-frequency">Fréquence de sauvegarde</label>
+                        <select id="backup-frequency">
+                            <option value="daily">Quotidienne</option>
+                            <option value="weekly">Hebdomadaire</option>
+                            <option value="monthly">Mensuelle</option>
+                        </select>
+                    </div>
+                    <button id="save-settings" class="btn btn-primary">Enregistrer les paramètres</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div id="add-product-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Ajouter un produit</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="add-product-form">
+                    <div class="form-group">
+                        <label for="product-name">Nom du produit</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Prix (€)</label>
+                        <input type="number" id="product-price" step="0.01" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Description</label>
+                        <textarea id="product-description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image">Image (URL)</label>
+                        <input type="url" id="product-image">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary close-modal">Annuler</button>
+                        <button type="submit" class="btn btn-primary">Ajouter le produit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
